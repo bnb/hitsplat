@@ -47,9 +47,9 @@ async function lowest () {
   })
 
   const output = {
-    title: `${chalk.red('Hitsplat')}: The RuneScape 3 Latency Tool`,
-    worldOutput: `   ${chalk.yellow('World')}: ${arrayOfPingObjects.world}`,
-    pingOutput: `    ${chalk.yellow('Ping')}: ${arrayOfPingObjects.ping}`
+    title: `${chalk.red('Hitsplat')}: ${chalk.white('The RuneScape 3 Latency Tool')}`,
+    worldOutput: `   ${chalk.yellow('World')}: ${chalk.white(arrayOfPingObjects.world)}`,
+    pingOutput: `    ${chalk.yellow('Ping')}: ${chalk.white(arrayOfPingObjects.ping)}`
   }
 
   const boxenOptions = {
@@ -60,5 +60,5 @@ async function lowest () {
     borderStyle: 'round'
   }
 
-  return console.log(boxen(`${output.title}\n\n${output.worldOutput}\n${output.pingOutput}`, boxenOptions))
+  return console.log(chalk.red(boxen(`${output.title}\n\n${output.worldOutput}\n${output.pingOutput}`, boxenOptions)))
 }
